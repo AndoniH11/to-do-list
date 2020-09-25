@@ -1,0 +1,660 @@
+/* ESTILOS GENERALES */
+
+@font-face{
+    font-family: 'Oswald';
+    src: url('./assets/fonts/RobotoCondensed-Regular.ttf')
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+button{
+    outline: none;
+}
+
+.oculto{
+    display: none !important;
+}
+/* NAV BAR */
+
+header{
+    height: 60px;
+    background-color: rgba(209, 19, 19, 0.89);
+}
+
+.add-project-button{
+    padding: 10px;
+    border-radius: 30px;
+    border: 2px solid white;
+    background-color: white;
+    color: rgba(129, 14, 14, 0.89);
+    box-shadow: 1px 1px 10px rgba(129, 14, 14, 0.89);
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.add-project-button:hover{
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    padding: 8px;
+}
+
+.left-container{
+    height: 60px;
+    float: left;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    margin-left: 50px;
+}
+
+.right-container{
+    margin-top: 12px;
+    float: right;
+}
+
+.right-container ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+    list-style: none;
+    margin-top: -10px;
+    margin-right: 50px;
+}
+
+ul .settings-desplegable{
+    display: flex;
+    flex-flow: column;
+    margin-left: -150px;
+    margin-top: 10px;
+    width: 350px;
+    height: auto;
+    position: absolute;
+    background-color: white;
+    box-shadow: 1px 1px 10px #aaa;
+    border-radius: 10px;
+    align-items: flex-start;
+    padding: 15px;
+    color: #444;
+    border-bottom: 1px solid #444;
+    font-weight: bold;
+}
+
+.settings-desplegable h2{
+    width: 320px;
+    padding: 15px;
+    color: #444;
+    border-bottom: 1px solid #444;
+    font-weight: bold;
+}
+
+.settings-desplegable .arrow{
+    margin-bottom: -4px;
+    float: right;
+    margin-right: 20px;
+}
+
+.item-desplegable{
+    width: 320px;
+    padding: 15px 0px;
+    padding-left: 15px;
+    background-color: rgba(238, 238, 238, 0.123);
+    border-bottom: 1px solid #ddd;
+    color: #666;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.item-desplegable:hover{
+    background-color: rgba(235, 232, 232, 0.473);
+}
+
+ul .notification-desplegable{
+    position: absolute;
+    display: flex;
+    flex-flow: wrap row;
+    width: 300px;
+    height: auto;
+    background-color: white;
+    box-shadow: 1px 1px 10px #aaa;
+    border-radius: 10px;
+    margin-left: -150px;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.notification-desplegable li{
+    padding: 15px;
+    color: #444;
+}
+
+.notification-desplegable h2{
+    color: #444;
+}
+
+.icon{
+    border: none;
+    background: transparent;
+    margin-right: 30px;
+    cursor: pointer;
+    font-size: 29px;
+    color: white;
+}
+
+.sizable:hover{
+    font-size: 33px;
+}
+
+@keyframes rotateIcon{
+    0%, 100%{
+        transform: rotate(0)
+    }50%{
+        transform: rotate(90deg)
+    }
+}
+
+.rotable:hover{
+    animation: rotateIcon linear 500ms
+}
+
+.hamaca{
+    width: 150px;
+}
+
+.premium{
+    background-color:  rgba(209, 19, 19, 0.89);
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px rgba(129, 14, 14, 0.89);
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.premium:hover{
+    background: white;
+    color: rgba(129, 14, 14, 0.89);
+}
+
+/* BARRA LATERAL */
+
+aside{
+    position: fixed;
+    top: 60px;
+    min-height: calc(100vh - 60px);
+    float: left;
+    width: 300px;
+    box-shadow: 7px 0px 10px -5px #666;
+    overflow: hidden;
+    background-color: rgb(253, 253, 253);
+}
+
+aside ::placeholder{
+    color: #444;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Oswald'
+}
+
+aside input{
+    border: none;
+    padding: 5px;
+    margin-left: -5px;
+}
+
+.aside-icon{
+    color: #444;
+    font-size: 20px;
+    margin-bottom: -3px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.aside-icon:hover{
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.aside section{
+    margin-top: 50px;
+    margin-left: 30px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #444;
+}
+
+
+.aside section ul li{
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+aside input{
+    padding-top: 8px;
+    font-size: 16px;
+    outline: none;
+    width: 90%;
+}
+
+aside input:focus{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.premium-aside{
+    display: none;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.contenido{
+    float: right;
+    width: calc(100% - 300px);
+    min-height: calc(100vh - 60px);
+    background-color: rgba(248, 244, 244, 0479);
+    padding-left: 0px !important;
+}
+
+.contenido h2{
+    font-size: 35px;
+    color: #444;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.tareas-container{
+    background-color: white;
+    margin: 40px;
+    min-height: 500px;
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 15px #ccc;
+    color: #444;
+}
+
+.tareas-container h3{
+    padding: 30px;
+    font-size: 26px;
+}
+
+.tareas{
+    box-shadow: 0px -5px 15px #eee inset;
+    min-height: 350px;
+    padding-top: 8px;
+}
+
+.tareas h4{
+    padding: 0px 30px;
+    font-size: 20px;
+    color: #777;
+    font-weight: normal;
+}
+
+.form-tareas{
+    border-radius: 5px;
+    box-shadow: 0px -3px 10px -5px #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.form-tareas input{
+    width: 350px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: #444;
+    outline: none;
+    border-radius: 25px;
+    margin: 13px;
+}
+
+.form-tareas input:focus{
+    box-shadow: 1px 1px 5px #ddd, -1px -1px 5px #ddd;
+}
+
+.form-tareas button{
+    border: none;
+    background: transparent;
+}
+
+.arrow-up{
+    font-size: 38px;
+    margin-top: 2px;
+    border: 1px solid #ccc;
+    padding: 7px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 300ms;
+    color: #666;
+    margin-left: 15px;
+}
+
+.arrow-up:hover{
+    box-shadow: 1px 1px 10px #ccc;
+}
+
+.tarea{
+    margin: 0px 30px;
+    margin-bottom: 10px;
+    padding: 0px 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-flow: row wrap;
+    line-height: 50px;
+    border-radius: 5px;
+    font-size: 19px;
+}
+
+.tarea:hover{
+    box-shadow: 1px 1px 5px #eee, -1px -1px 5px #eee;
+}
+
+.checkbox{
+    border: 1px solid #ccc;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    margin-right: 20px;
+    margin-top: 14px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.checkbox:hover{
+    box-shadow: 1px 1px 5px #ccc;
+}
+
+.tarea .text{
+    width: 280px; 
+    cursor: pointer;
+}
+
+.tarea .trash{
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 400ms;
+}
+
+.tarea .trash:hover{
+    color: black;
+}
+
+/* PANTALLA INTRODUCIR DETALLES TAREA */
+
+.detalles-pantalla{
+    display: flex;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+    z-index: 100;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.425);
+    justify-content: center;
+    align-content: center;
+}
+
+.detalles-container{
+    margin: 0px auto;
+    margin-top: 80px;
+    align-self: center;
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    box-shadow: 1px 1px 10px #555;
+    border-radius: 5px;
+}
+
+.detalles-titulo{
+    padding: 17px 20px;
+    height: 60px;
+    box-shadow: 0px 2px 5px #666;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.detalles-titulo h4{
+    padding-bottom: 5px;
+    padding-left: 5px;
+    width: 80px;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #444;
+    color: #444;
+    float: left;
+}
+
+.detalles-titulo .exit{
+    float: right;
+    border: 1px solid #888;
+    border-radius: 999px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 11.5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #888;
+    margin-top: 2px;
+    margin-right: 1px;
+    font-size: 13px;
+    transition: all 300ms;
+}
+
+.detalles-titulo .exit:hover{
+    box-shadow: 1px 1px 10px #ccc;
+}
+
+.detalles-form{
+    height: 540px;
+    box-shadow: 0px 0px 45px #eee inset;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.titulo-tarea{
+    padding: 30px 30px;
+    color: #444;
+    font-size: 24px;
+}
+
+.detalles-form input[type=text]{
+    padding: 10px 5px;
+    margin-left: 26px;
+    width: 158px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.detalles-form input[type=text]:focus{
+    background-color: rgb(252, 249,249);
+}
+
+.detalles-form .input-hora{
+    margin-left: 12px;
+}
+
+.detalles-form form .mensaje{
+    width: 344px;
+    padding-bottom: 200px;
+    margin-top: 20px;
+}
+
+.recordatorios-container h4{
+    margin: 20px 30px;
+    color: #444;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.recordatorios{
+    margin: 0px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-gap: 15px;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.recordatorios button{
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    color: #666;
+    background-color: rgba(238, 238, 238, 0.795);
+    font-size: 11px;
+    text-align: start;
+    padding-left: 10px;
+    transition: all 400ms;
+}
+
+.recordatorios button:hover{
+    background-color: rgb(235, 235, 233)
+}
+
+.recordatorio-icon{
+    font-size: 15px;
+    margin-bottom: -2.5px;
+    margin-right: 8px;
+}
+
+/* PANTALLA DETALLES TAREA */
+
+.detalles-tarea-container .cuando{
+    height: 40px;
+    width: 168px;
+    border: 1px solid #ccc;
+    float: left;
+    margin-left: 20px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.detalles-tarea-container .mensaje-detalles{
+    width: 356px;
+    padding-bottom: 200px;
+    margin-top: 60px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+    padding-left: 15px;
+}
+
+@media (max-width: 845px){
+    .contenido{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenido .saludo{
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .personal-tareas-container{
+        margin: 0 auto;
+    }
+
+    .premium{
+        display: none;
+    }
+
+    .right-container ul{
+        margin-right: 20px;
+    }
+
+    .premium-aside{
+        margin: 0 auto;
+        display: block;
+        position: absolute;
+        bottom: 70px;
+        left: 90px;
+    }
+
+    .premium-aside:hover{
+        color: rgba(209, 19, 19, 0.89);
+        border: 2px solid rgba(209, 19, 19, 0.89);
+    }
+}
+
+@media (max-width: 580px){
+ .tareas-container{
+        margin: 40px 0px;
+        width: 80%;
+    }
+
+    .form-tareas input{
+        width: 75%;
+    }
+
+    .tarea .text{
+        width: 78%;
+    }
+
+    
+}
+
+@media (max-width: 450px){
+
+    header .left-container{
+        width: 50px;
+    }
+
+    .contenido .saludo{
+        margin-top: 0px;
+    }
+
+    .detalles-container{
+        width: 90%;
+    }
+
+    .detalles-tarea-container .cuando{
+        width: 40%;
+    }
+
+    .detalles-tarea-container .mensaje-detalles{
+        width: 86%;
+    }
+
+    .detalles-form input[type=text] {
+        width: 40%;
+    }
+
+    .detalles-form form .mensaje{
+        width: 86%;
+    }
+}
