@@ -423,7 +423,7 @@ aside input:focus{
     margin-top: 80px;
     align-self: center;
     width: 400px;
-    height: 600px;
+    height: 630px;
     background-color: white;
     box-shadow: 1px 1px 10px #555;
     border-radius: 5px;
@@ -657,4 +657,9 @@ aside input:focus{
     .detalles-form form .mensaje{
         width: 86%;
     }
+
+    .form-tareas input{
+        width: 70%;
+    }
+
 }
