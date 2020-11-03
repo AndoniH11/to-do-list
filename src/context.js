@@ -100,7 +100,8 @@ class ContextProvider extends React.Component{
                 tarea: nuevaTareaNombre,
                 fecha: nuevaTareaFecha,
                 hora: nuevaTareaHora,
-                detalles: nuevaTareaMensaje
+                detalles: nuevaTareaMensaje,
+                name: name
             }
 
             if(name === 'personal'){
@@ -145,8 +146,16 @@ class ContextProvider extends React.Component{
     removeItem = (id) =>{
         let tempTareas = [...this.state.tareas]
         tempTareas = tempTareas.filter((tarea) => tarea.id !== id)
+        let tempPersonal = tempTareas.filter((tarea) => tarea.name === 'personal');
+        let tempTrabajo = tempTareas.filter((tarea) => tarea.name === 'trabajo')
+        let tempPrioridad = tempTareas.filter((tarea) => tarea.name === 'prioridad')
+        let tempOtros = tempTareas.filter((tarea) => tarea.name === 'otros')
         this.setState({
-            tareas: tempTareas
+            tareas: tempTareas,
+            personal: tempPersonal,
+            trabajo: tempTrabajo,
+            prioridad: tempPrioridad,
+            otros: tempOtros
         })
     }
 
